@@ -1,0 +1,8 @@
+file_format: "1"
+id: 3d660p
+name: 3d660p
+type: shield
+url: http://www.google.com
+requires: [pro_micro]
+features:
+  - keys

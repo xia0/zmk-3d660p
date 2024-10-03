@@ -1,0 +1,3 @@
+# No whitespace after the comma or in your keyboard name!
+config SHIELD_3D660P
+    def_bool $(shields_list_contains,3d660p)

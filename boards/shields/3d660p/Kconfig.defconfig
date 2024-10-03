@@ -1,0 +1,7 @@
+if SHIELD_3D660P
+
+# Name must be less than 16 characters long!
+config ZMK_KEYBOARD_NAME
+    default "3d660p"
+
+endif
