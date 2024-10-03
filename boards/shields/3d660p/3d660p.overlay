@@ -2,12 +2,11 @@
 
 / {
     chosen {
+        zmk,kscan = &kscan0;
         zmk,physical-layout = &default_layout;
         // Other chosen items
     };
-};
 
-/ {
     kscan0: kscan0 {
         compatible = "zmk,kscan-gpio-matrix";
         diode-direction = "col2row";
@@ -25,9 +24,15 @@
             , <&pro_micro 21 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             ;
     };
-};
 
-/ {
+    default_layout: default_layout {
+        compatible = "zmk,physical-layout";
+        display-name = "Default Layout";
+        transform = <&default_transform>;
+        kscan = <&kscan0>;
+    };
+
+
     default_transform: keymap_transform0 {
         compatible = "zmk,matrix-transform";
         columns = <3>; // Length of the "col-gpios" array
@@ -41,13 +46,7 @@
             RC(2,0) RC(2,1) RC(2,2)
         >;
     };
-};
 
-/ {
-    default_layout: default_layout {
-        compatible = "zmk,physical-layout";
-        display-name = "Default Layout";
-        transform = <&default_transform>;
-        kscan = <&kscan0>;
-    };
+
+
 };
