@@ -5,6 +5,7 @@
         zmk,kscan = &kscan0;
         zmk,physical-layout = &default_layout;
         // Other chosen items
+        zephyr,display = &oled;
     };
 
     kscan0: kscan0 {
