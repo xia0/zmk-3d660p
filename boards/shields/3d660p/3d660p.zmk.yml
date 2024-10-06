@@ -4,6 +4,5 @@ name: 3d660p
 type: shield
 url: http://www.goatse.cx
 requires: [pro_micro]
-exposes: [i2c_oled]
 features:
   - keys
